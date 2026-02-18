@@ -6,102 +6,96 @@
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
 
+<!-- External stylesheet link -->
 <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body>
 
-<!-- Main Header -->
-<header>
-  <h1>Header</h1>
-</header>
+  <body>
+    <!-- Here is our main header that is used across all the pages of our website -->
 
-<nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Our team</a></li>
-    <li><a href="#">Projects</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
+    <header>
+      <h1>Header</h1>
+    </header>
 
-  <form>
-    <input type="search" name="q" placeholder="Search query">
-    <input type="submit" value="Go!">
-  </form>
-</nav>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
 
-<!-- Main Content -->
-<main>
+       <!-- A Search form is another common non-linear way to navigate through a website. -->
 
-  <article>
+       <form>
+         <input type="search" name="q" placeholder="Search query">
+         <input type="submit" value="Go!">
+       </form>
+     </nav>
 
-    <h2>Article heading</h2>
+    <!-- Here is our page's main content -->
+    <main>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Donec a diam lectus. Sed sit amet ipsum mauris.
-      Maecenas congue ligula as quam viverra nec consectetur ante hendrerit.
-      Donec et mollis dolor. Praesent et diam eget libero egestas
-      mattis sit amet vitae augue. Nam tincidunt congue enim,
-      ut porta lorem lacinia consectetur.
-    </p>
+      <!-- It contains an article -->
+      <article>
+        <h2>Article heading</h2>
 
-    <h3>Subsection</h3>
+        <!--=========================
+          Add Links in the article
+          ===========================-->
 
-    <p>
-      Donec ut libero sed arcu vehicula ultricies a non tortor.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Aenean ut gravida lorem. Ut turpis felis,
-      pulvinar a semper sed, adipiscing id dolor.
-    </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a <a href="#">diam lectus</a>. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        
+        <!--======================================================
+         SUBSECTION 1
+         Create a border around each subsection including heading.
+         ========================================================= -->
 
-    <p>
-      Pellentesque auctor nisi id magna consequat sagittis.
-      Curabitur dapibus, enim sit amet elit pharetra tincidunt
-      feugiat nisl imperdiet. Ut convallis libero in urna
-      ultrices accumsan. Donec sed odio eros.
-    </p>
+        <section>
+          <h3>Subsection</h3>
 
-    <h3>Another subsection</h3>
+          <p><a href="#">Donec ut librero</a> sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
 
-    <p>
-      Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus.
-      Cum sociis natoque penatibus et magnis dis parturient montes,
-      nascetur ridiculus mus. In rutrum accumsan ultricies.
-      Mauris vitae nisi at sem facilisis semper ac in est.
-    </p>
+          <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        </section>
+        
+        <!--======================================================
+         SUBSECTION 2
+         Same pattern — wrapped in <section> for the border.
+         ========================================================= -->
+        
+        <section>
+          <h3>Another subsection</h3>
 
-    <p>
-      Vivamus fermentum semper porta. Nunc diam velit,
-      adipiscing ut tristique vitae sagittis vel odio.
-      Maecenas convallis ullamcorper ultricies.
-      Curabitur ornare, ligula semper consectetur sagittis,
-      nisi diam iaculis velit, id fringilla sem nunc vel mi.
-    </p>
+          <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
 
-  </article>
+          <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas <a href="#">ullamcorper ultricied</a>. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        </section>
+        
+      </article>
 
-  <aside>
+      <!-- the aside content can also be nested within the main content -->
+      <aside>
+        <h2>Related</h2>
 
-    <h2>Related</h2>
+        <ul>
+          <li><a href="#">Oh I do like to be beside the seaside</a></li>
+          <li><a href="#">Oh I do like to be beside the sea</a></li>
+          <li><a href="#">Although in the North of England</a></li>
+          <li><a href="#">It never stops raining</a></li>
+          <li><a href="#">Oh well...</a></li>
+        </ul>
+      </aside>
 
-    <ul>
-      <li><a href="#">Oh I do like to be beside the seaside</a></li>
-      <li><a href="#">Oh I do like to be beside the sea</a></li>
-      <li><a href="#">Although in the North of England</a></li>
-      <li><a href="#">It never stops raining</a></li>
-      <li><a href="#">Oh well...</a></li>
-    </ul>
+    </main>
 
-  </aside>
+    <!-- And here is our main footer that is used across all the pages of our website -->
 
-</main>
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
 
-<footer>
-  <p>©Copyright 2050 by nobody. All rights reserved.</p>
-</footer>
-
-</body>
+  </body>
 </html>
-
