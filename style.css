@@ -11,7 +11,7 @@
   --c-red: rgb(220,50,47);
   --c-magenta: rgb(211,54,130);
   --c-violet: rgb(108,113,196);
-  --c-blue: rgb(38,139,210);
+  --c-blue: rgb(38, 58, 210);
   --c-cyan: rgb(42,161,152);
   --c-green: rgb(133,153,0);
 }
@@ -43,4 +43,57 @@ article a {
 /* 5. When the mouse hovers over a link, it should be highlighted orange */
 article a:hover {
   color: var(--c-orange);
+}
+
+/* 11. Set the maximum width of the page to 800px */
+body {
+  background-color: var(--c-background-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 7. Align the Header in the center, and set text size to 150%.
+   The heading should be c-yellow. */
+header {
+  background-color: var(--c-background-highlights);
+  color: var(--base-font-color);
+  text-align: center;
+  margin-top: 0;
+  padding: 10px 0;
+}
+
+header h1 {
+  color: var(--c-yellow);
+  font-size: 150%;
+  font-weight: bold;
+  margin: 0;
+}
+
+footer {
+  background-color: var(--c-background-highlights);
+  color: var(--base-font-color);
+  text-align: left;
+}
+
+/* 8.  Remove the bullet points from the unordered list in the nav section.
+   9. Align list items to center and apply flex layout across full width. */
+nav {
+  padding: 8px 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+}
+
+nav ul li a {
+  color: var(--c-blue);
 }
