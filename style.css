@@ -16,3 +16,31 @@
   --c-green: rgb(133,153,0);
 }
 
+/* 1. Set the background color of the page to c-background-color */
+html {
+  background-color: var(--c-background-color);
+}
+
+body {
+  background-color: var(--c-background-color);
+}
+
+/* 2. Set the background color of the header and footer to c-background-highlights */
+header, footer {
+  background-color: var(--c-background-highlights);
+}
+
+/* 3. Set the text color in the main, footer, and header to be base-font-color */
+header, footer, main {
+  color: var(--base-font-color);
+}
+
+/* 4. Links in the article should be c-magenta */
+article a {
+  color: var(--c-magenta);
+}
+
+/* 5. When the mouse hovers over a link, it should be highlighted orange */
+article a:hover {
+  color: var(--c-orange);
+}
