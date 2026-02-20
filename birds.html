@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <title>Bird Gallery</title>
+    <style>
+        /* Light theme (default) */
+        :root {
+            --primary-color: rgb(252, 225, 252);
+            --secondary-color: rgb(99, 178, 204);
+            --bg-color: rgb(180, 96, 244);
+            --font-color: rgb(74,79,88);
+            --heading-color: rgb(160, 134, 240);
+        }
+
+        /* Dark theme */
+        [data-theme="dark"] {
+            --primary-color: rgb(66, 70, 73);
+            --secondary-color: rgb(115, 145, 168);
+            --bg-color: rgb(33, 33, 33);
+            --font-color: rgb(255, 255, 255);
+            --heading-color: rgb(235, 10, 128);
+        }
+
+        /* Apply the CSS variables */
+        body {
+            background-color: var(--bg-color);
+            color: var(--font-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0;
+            padding: 10px;
+            padding-top: 0;
+            text-align: left;
+        }
+
+        #birdImage {
+            width: 900px;
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        #birdCredit {
+            background-color: var(--primary-color);
+            color: var(--font-color);
+            font-size: 16px;
+            margin: 0 0 20px 0;
+            padding: 10px;  
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: flex-start;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: var(--font-color);
+            border: none;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(215, 214, 214);
+        }
+
+        #themeToggle {
+            margin-top: 0;
+            background-color: var(--primary-color);
+            font-weight: bold;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Image display -->
+        <img id="birdImage" src="http://www.outgrabe.net/bird00.jpg" alt="Bird">
+        
+        <!-- Photographer credit -->
+        <p id="birdCredit">Pardalote by fir0002 (CC-by-NC)</p>
+        
+        <!-- Bird selection buttons -->
+        <div class="button-container">
+            <button onclick="changeBird('Pardalote')">Pardalote</button>
+            <button onclick="changeBird('Purple Swamp Hen')">Purple Swamp Hen</button>
+            <button onclick="changeBird('White-headed Stilt')">White-headed Stilt</button>
+            <button onclick="changeBird('Inland Thornbill')">Inland Thornbill</button>
+            <button onclick="changeBird('Rose Robin')">Rose Robin</button>
+        </div>
+        
+        <!-- Theme toggle button -->
+        <button id="themeToggle" onclick="toggleTheme()">Change Theme</button>
+    </main>
+
+    <script>
+        // Store all bird information
+        const birds = {
+            'Pardalote': {
+                image: 'http://www.outgrabe.net/bird00.jpg',
+                credit: 'Pardalote by fir0002 (CC-by-NC)'
+            },
+            'Purple Swamp Hen': {
+                image: 'http://www.outgrabe.net/bird01.jpg',
+                credit: 'Purple swamp hen by Toby Hudson (CC-by-SA)'
+            },
+            'White-headed Stilt': {
+                image: 'http://www.outgrabe.net/bird02.jpg',
+                credit: 'White-headed Stilt by JJ Harrison (CC-by-SA)'
+            },
+            'Inland Thornbill': {
+                image: 'http://www.outgrabe.net/bird03.jpg',
+                credit: 'Inland Thornbill by Peter Jacobs (CC-by-SA)'
+            },
+            'Rose Robin': {
+                image: 'http://www.outgrabe.net/bird04.jpg',
+                credit: 'Rose Robin by JJ Harrison (CC-by-SA)'
+            }
+        };
+
+        // Change the displayed bird when button is clicked
+        function changeBird(birdName) {
+            const birdData = birds[birdName];
+            document.getElementById('birdImage').src = birdData.image;
+            document.getElementById('birdCredit').textContent = birdData.credit;
+        }
+
+        // Toggle between light and dark theme
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                html.removeAttribute('data-theme');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+            }
+        }
+    </script>
+</body>
+</html>
